@@ -31,7 +31,7 @@ All execution scripts adhere to the following format
 python run_*.py --cmd
 ```
 
-A list of possible commandline arguments can be found in each `run_*.py` script. In the case of VAE, pay attention to the choice of encoder/decoder architecture controlled by the argument `--design`, as this influences whether autoregression is applied during inference. Tensorboard logs are automatically saved to `./log/` and models are saved to `./checkpoints/`.
+A list of possible commandline arguments can be found in each `run_*.py` script. The default commandline arguments sets up a semi-supervised regime where only 1000 of the training samples are labeled. This means posterior regularization is done in a semi-supervised manner. In the case of VAE, pay attention to the choice of encoder/decoder architecture controlled by the argument `--design`, as this influences whether autoregression is applied during inference. Tensorboard logs are automatically saved to `./log/` and models are saved to `./checkpoints/`.
 
 ## Results
 
