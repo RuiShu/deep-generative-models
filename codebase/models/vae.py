@@ -122,9 +122,9 @@ def vae():
 
     T.ops_main = [summary_main, train_main]
     T.fn_test_acc = fn_test_acc
-    T.fn_fake_x = fn_fake_x
 
     if args.gw > 0:
+        T.fn_fake_x = fn_fake_x
         T.ops_image = summary_image
 
     return T
